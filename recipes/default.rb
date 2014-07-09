@@ -31,7 +31,7 @@ if node['zenoss']['client']['server'].nil?
         if server.attribute?("zenoss")
          if server['zenoss'].attribute?('server')
            if server['zenoss']['server'].attribute?('zenoss_pubkey')
-             pubkey = zenoss["server"]["zenoss_pubkey"]
+             pubkey = server['zenoss']["server"]["zenoss_pubkey"]
            end
          end
         end
